@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>پنل کاربری | ریل کنکور</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <script src="panel.js" defer></script>
+</head>
+<body>
+  <header class="header">
+    <h2>👋 خوش آمدید!</h2>
+    <button class="back-btn" onclick="location.href='index.html'">بازگشت</button>
+  </header>
+
+  <main class="dashboard">
+    <button class="menu-btn" onclick="openSection('profile')">👤 پروفایل</button>
+    <button class="menu-btn" onclick="openSection('report')">📝 گزارش کار</button>
+    <button class="menu-btn" onclick="openSection('analysis')">📈 آنالیز</button>
+    <button class="menu-btn" onclick="openSection('tools')">🧰 ابزارها</button>
+  </main>
+
+  <!-- 🔹 بخش پروفایل -->
+  <section id="profile" class="panel-section">
+    <h3>پروفایل</h3>
+    <form id="profileForm">
+      <input type="text" placeholder="نام و نام خانوادگی" name="fullname">
+      <input type="text" placeholder="پایه تحصیلی" name="grade">
+      <input type="text" placeholder="رشته تحصیلی" name="major">
+      <input type="text" placeholder="هدف" name="goal">
+      <input type="number" placeholder="ساعت مطالعه این هفته" name="weekStudy">
+      <input type="number" placeholder="ساعت مطالعه این ماه" name="monthStudy">
+      <input type="number" placeholder="ساعت مطالعه کل" name="totalStudy">
+      <input type="number" placeholder="تست این هفته" name="weekTest">
+      <input type="number" placeholder="تست این ماه" name="monthTest">
+      <input type="number" placeholder="تست کل" name="totalTest">
+      <button type="submit">ذخیره</button>
+    </form>
+    <button onclick="goBack()">بازگشت</button>
+  </section>
+
+  <!-- 🔹 بخش گزارش کار -->
+  <section id="report" class="panel-section">
+    <h3>گزارش کار</h3>
+    <button onclick="openReportForm()">📅 ثبت گزارش جدید</button>
+    <button onclick="showReports()">📂 گزارش‌های من</button>
+    <div id="reportArea"></div>
+    <button onclick="goBack()">بازگشت</button>
+  </section>
+
+  <!-- 🔹 بخش آنالیز -->
+  <section id="analysis" class="panel-section">
+    <h3>📈 آنالیز پیشرفت</h3>
+    <canvas id="chartCanvas" width="400" height="200"></canvas>
+    <button onclick="goBack()">بازگشت</button>
+  </section>
+
+  <!-- 🔹 بخش ابزارها -->
+  <section id="tools" class="panel-section">
+    <h3>🧰 ابزارهای کمکی</h3>
+    <a href="https://www.bahesab.ir/calc/calculator/" target="_blank">🧮 ماشین حساب</a><br>
+    <a href="https://www.bahesab.ir/math/equation/" target="_blank">➗ حل معادله</a><br>
+    <a href="https://www.bahesab.ir/time/" target="_blank">🕒 زمان تهران</a><br>
+    <a href="https://copilot.microsoft.com/chats/QUryNskAyERKJuj8KZ8jq" target="_blank">🤖 سوالتو بپرس</a><br>
+    <button onclick="goBack()">بازگشت</button>
+  </section>
+
+  <footer class="footer">
+    ریل کنکور 🚆<br>
+    این‌جا همه چیز برای رسیدن به رتبه هست:<br>
+    📚 نکته، تست، تحلیل آزمون<br>
+    📊 آزمون آنلاین، برنامه و راهنمای مسیر<br>
+    همه باهم، روی ریل موفقیت حرکت می‌کنیم!<br>
+    ارتباط با من: <a href="https://t.me/railkonkur">t.me/railkonkur</a>
+  </footer>
+</body>
+</html>
